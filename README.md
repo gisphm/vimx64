@@ -12,3 +12,10 @@
 最后就是编译。我参考了[这位德国大大的编译脚本](https://tuxproject.de/projects/vim/_compile.bat.php)（之前都是下载他编译好的），然后写了个自己的[编译脚本](compile.bat)。
 
 我编译好的[64位vim](vim-win64.7z)，自己上传一份。
+
+## vim 支持库列表
+以下库都是动态链接的
++ perl 5.20.1 （用vs2010自行编译）
++ lua 5.2.3 （用mingw-w64编译）
++ python 2.7.9 （官方下载的二进制安装包）
++ tcl 8.6.2 （用vs2010自行编译）
