@@ -1,40 +1,69 @@
-@echo off
+@ECHO OFF
 
 if exist vim-win64.7z del vim-win64.7z
 
-if exist vim rd /S /Q vim
-
-git clone --depth=1 https://github.com/gisphm/vim-mirror.git vim
-
-cd vim\src
-
 REM set library versions ...
 REM ------------------------------------
-set LIBPYTHON2=27
-set LIBPYTHON3=34
-set LIBLUASHRT=52
-set LIBPERLVER=520
+REM set LIBPYTHON2=27
+set LIBPYTHON3=35
+set LIBLUASHRT=53
 set LIBTCLSHRT=86
 set LIBTCLLONG=8.6
 
+SET VIM_SRC=C:\WorkSpaces\buildvim\vim
+
+CD /D %VIM_SRC%
+
+git clean -xdf
+
+git checkout master -f
+git pull
+
+CD /D %VIM_SRC%\src
+
 REM create output directory ...
 REM ------------------------------------
-mkdir temp\win64
-
-REM ------------------------------------
-REM x64 (64-bit) packages
-REM ------------------------------------
+IF NOT EXIST temp\win64 mkdir temp\win64
 
 REM prepare the environment ...
 REM ------------------------------------
-call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" amd64
+call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+
+SET CPU=AMD64
+SET DEBUG=no
+SET FEATURES=HUGE
+SET MBYTE=yes
+SET CSCOPE=yes
+SET SNIFF=yes
+SET IME=yes
+SET NETBEANS=no
+SET ICONV=yes
+SET GETTEXT=yes
+SET WINVER=0x0500
+SET OPTIMIZE=MAXSPEED
+SET LUA=C:\Dev\Utils\lua
+SET DYNAMIC_LUA=yes
+SET LUA_VER=%LIBLUASHRT%
+REM SET PYTHON=C:\Dev\Python\Python27
+REM SET DYNAMIC_PYTHON=yes
+REM SET PYTHON_VER=%LIBPYTHON2%
+SET PYTHON3=C:\Users\phmfk\AppData\Local\Programs\Python\Python35
+SET DYNAMIC_PYTHON3=yes
+SET PYTHON3_VER=%LIBPYTHON3%
+SET TCL=C:\Dev\Utils\tcl
+SET TCL_VER=%LIBTCLSHRT%
+SET TCL_VER_LONG=%LIBTCLLONG%
+SET DYNAMIC_TCL=yes
+SET XPM=no
+SET SDK_INCLUDE_DIR=C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include
+SET MSVCVER=14.0
 
 REM compile! (x64)
 REM -------------------------------------
 nmake /C /S /f Make_mvc.mak clean
-nmake /C /S /f Make_mvc.mak CPU=AMD64 DEBUG=no FEATURES=HUGE MBYTE=yes CSCOPE=yes SNIFF=yes IME=yes GIME=yes GUI=yes OLE=yes XPM=.\xpm\x64 NETBEANS=no ICONV=yes GETTEXT=yes WINVER=0x0500 DIRECTX=yes OPTIMIZE=MAXSPEED LUA=C:\Dev\Lua DYNAMIC_LUA=yes LUA_VER=%LIBLUASHRT% PYTHON=C:\Dev\Python\Python27 DYNAMIC_PYTHON=yes PYTHON_VER=%LIBPYTHON2% PYTHON3=C:\Dev\Python\Python34 DYNAMIC_PYTHON3=yes PYTHON3_VER=%LIBPYTHON3% PERL=C:\Dev\perl DYNAMIC_PERL=yes PERL_VER=%LIBPERLVER% TCL=C:\Dev\tcl TCL_VER=%LIBTCLSHRT% TCL_VER_LONG=%LIBTCLLONG% DYNAMIC_TCL=yes
+nmake /C /S /f Make_mvc.mak IME=yes GIME=yes GUI=yes OLE=yes DIRECTX=yes
 nmake /C /S /f Make_mvc.mak clean
-nmake /C /S /f Make_mvc.mak CPU=AMD64 DEBUG=no FEATURES=HUGE MBYTE=yes CSCOPE=yes SNIFF=yes IME=no GIME=no GUI=no OLE=no XPM=.\xpm\x64 DIRECTX=no NETBEANS=no OPTIMIZE=MAXSPEED ICONV=yes GETTEXT=yes WINVER=0x0500 LUA=C:\Dev\Lua DYNAMIC_LUA=yes LUA_VER=%LIBLUASHRT% PYTHON=C:\Dev\Python\Python27 DYNAMIC_PYTHON=yes PYTHON_VER=%LIBPYTHON2% PYTHON3=C:\Dev\Python\Python34 DYNAMIC_PYTHON3=yes PYTHON3_VER=%LIBPYTHON3% PERL=C:\Dev\perl DYNAMIC_PERL=yes PERL_VER=%LIBPERLVER% TCL=C:\Dev\tcl TCL_VER=%LIBTCLSHRT% TCL_VER_LONG=%LIBTCLLONG% DYNAMIC_TCL=yes
+nmake /C /S /f Make_mvc.mak IME=no GIME=no GUI=no OLE=no DIRECTX=no
 
 REM keep up the right directory structure
 REM -------------------------------------
@@ -66,7 +95,9 @@ del temp\win64\vim??x??.*
 REM pack it!
 REM ------------------------------------
 cd temp\win64
-"%PROGRAMFILES%\7-zip\7z" a -mx=9 -r -bd ..\..\..\..\vim-win64.7z *
+"%PROGRAMFILES%\7-Zip\7z" a -mx=9 -r -bd ..\..\..\..\vim-win64.7z *
 
-cd ..\..\..\..
-rd /S /Q vim
+CD /D %VIM_SRC%\src
+RMDIR /S /Q temp
+
+@ECHO ON
