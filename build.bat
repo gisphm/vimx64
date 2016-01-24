@@ -1,34 +1,41 @@
 @ECHO OFF
 
-if exist vim-win64.7z del vim-win64.7z
+REM set some useful evironment variables
+REM ------------------------------------
+SET VIM_SRC=C:\WorkSpaces\buildvim\vim
+SET ZIP_DIR=C:\WorkSpaces\buildvim
 
 REM set library versions ...
 REM ------------------------------------
-REM set LIBPYTHON2=27
+set LIBPYTHON2=27
 set LIBPYTHON3=35
 set LIBLUASHRT=53
+REM set LIBPERLVER=520
 set LIBTCLSHRT=86
 set LIBTCLLONG=8.6
 
-SET VIM_SRC=C:\WorkSpaces\buildvim\vim
+REM delete the old zip file if it is existed
+REM ------------------------------------
+CD /D %ZIP_DIR%
+if exist vim-win64.7z del vim-win64.7z
 
+REM clean up and get source code from upstream
+REM ------------------------------------
 CD /D %VIM_SRC%
-
 git clean -xdf
-
 git checkout master -f
 git pull
 
-CD /D %VIM_SRC%\src
-
-REM create output directory ...
+REM begin to build ...
 REM ------------------------------------
+CD /D %VIM_SRC%\src
 IF NOT EXIST temp\win64 mkdir temp\win64
 
-REM prepare the environment ...
+REM prepare the build environment ...
+REM those evironment variables can be
+REM found in file "%VIM_SRC%\src\Make_mvc.mak"
 REM ------------------------------------
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
-
 SET CPU=AMD64
 SET DEBUG=no
 SET FEATURES=HUGE
@@ -44,12 +51,15 @@ SET OPTIMIZE=MAXSPEED
 SET LUA=C:\Dev\Utils\lua
 SET DYNAMIC_LUA=yes
 SET LUA_VER=%LIBLUASHRT%
-REM SET PYTHON=C:\Dev\Python\Python27
-REM SET DYNAMIC_PYTHON=yes
-REM SET PYTHON_VER=%LIBPYTHON2%
-SET PYTHON3=C:\Users\phmfk\AppData\Local\Programs\Python\Python35
+SET PYTHON=C:\Dev\Python27
+SET DYNAMIC_PYTHON=yes
+SET PYTHON_VER=%LIBPYTHON2%
+SET PYTHON3=C:\Dev\Python35
 SET DYNAMIC_PYTHON3=yes
 SET PYTHON3_VER=%LIBPYTHON3%
+REM SET PERL=C:\Dev\perl
+REM SET DYNAMIC_PERL=yes
+REM SET PERL_VER=%LIBPERLVER%
 SET TCL=C:\Dev\Utils\tcl
 SET TCL_VER=%LIBTCLSHRT%
 SET TCL_VER_LONG=%LIBTCLLONG%
@@ -59,6 +69,7 @@ SET SDK_INCLUDE_DIR=C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include
 SET MSVCVER=14.0
 
 REM compile! (x64)
+REM compile both gui and console version binaries
 REM -------------------------------------
 nmake /C /S /f Make_mvc.mak clean
 nmake /C /S /f Make_mvc.mak IME=yes GIME=yes GUI=yes OLE=yes DIRECTX=yes
@@ -93,11 +104,21 @@ del temp\win64\*.png
 del temp\win64\vim??x??.*
 
 REM pack it!
+REM 7z command line options:
+REM a -- add files to archive
+REM -r -- recurse subdirectories
+REM -bd -- disable progress indicator
+REM -mmt[N] -- set number of cpu threads
 REM ------------------------------------
 cd temp\win64
-"%PROGRAMFILES%\7-Zip\7z" a -mx=9 -r -bd ..\..\..\..\vim-win64.7z *
+"%PROGRAMFILES%\7-Zip\7z" a -mmt4 -r -bd %ZIP_DIR%\vim-win64.7z *
 
-CD /D %VIM_SRC%\src
-RMDIR /S /Q temp
+REM clean up everything
+REM in the source code directory
+REM ------------------------------------
+CD /D %VIM_SRC%
+git checkout master -f
+git clean -xdf
 
+EXIT /B
 @ECHO ON

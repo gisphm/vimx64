@@ -19,15 +19,15 @@
 
 ## 几点说明
 + ~~我没有安装 Python 2.7，所以没有 python2 的支持。~~
-+ 若启用 xpm 库支持，则在 Visual Studio 2015 的编译过程中库`libXpm.lib`出现链接问题，无法编译出 GUI，故舍去 xpm 库。
++ 若启用 xpm 库支持，则在 Visual Studio 2015 的`gvim.exe`链接过程中库`libXpm.lib`会出现链接问题，无法编译出 GUI，故舍去 xpm 库。
 
-## `:ver` 命令输出为
+## 命令行 `vim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jan 21 2016 08:46:06)
-MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-1147
-Huge version with GUI.  Features included (+) or not (-):
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jan 24 2016 11:05:22)
+MS-Windows 64-bit console version
+Included patches: 1-1161
+Huge version without GUI.  Features included (+) or not (-):
 +acl             +eval            +mouse           +syntax
 +arabic          +ex_extra        -mouseshape      +tag_binary
 +autocmd         +extra_search    +multi_byte      +tag_old_static
