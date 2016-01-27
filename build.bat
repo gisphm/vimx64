@@ -42,7 +42,6 @@ SET FEATURES=HUGE
 SET MBYTE=yes
 SET CSCOPE=yes
 SET SNIFF=yes
-SET CHANNEL=no
 SET NETBEANS=no
 SET ICONV=yes
 SET GETTEXT=yes
@@ -72,9 +71,9 @@ REM compile! (x64)
 REM compile both gui and console version binaries
 REM -------------------------------------
 nmake /C /S /f Make_mvc.mak clean
-nmake /C /S /f Make_mvc.mak IME=yes GIME=yes GUI=yes OLE=yes DIRECTX=yes
+nmake /C /S /f Make_mvc.mak IME=yes GIME=yes GUI=yes OLE=yes DIRECTX=yes CHANNEL=no
 nmake /C /S /f Make_mvc.mak clean
-nmake /C /S /f Make_mvc.mak IME=no GIME=no GUI=no OLE=no DIRECTX=no
+nmake /C /S /f Make_mvc.mak IME=no GIME=no GUI=no OLE=no DIRECTX=no CHANNEL=yes
 
 REM keep up the right directory structure
 REM -------------------------------------

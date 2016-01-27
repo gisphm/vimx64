@@ -21,6 +21,7 @@
 
 ## 几点说明
 + 压缩包里已经自带有最新版本的 `ctags.exe` `lua53.dll` `tcl86.dll`。
++ 系统里必须要有 [Visual C++ Redistributable for Visual Studio 2015 Update 1][5]。
 + ~~我没有安装 Python 2.7，所以没有 python2 的支持。~~
 + ~~若启用 xpm 库支持，则在 Visual Studio 2015 的`gvim.exe`链接过程中库`libXpm.lib`会出现链接问题，无法编译出 GUI，故舍去 xpm 库。~~
     + 我重新用 Visual Studio 2015 编译了 xpm 库。现在的 GVim 可以打开 xpm 文件了。
@@ -38,9 +39,9 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jan 27 2016 18:47:20)
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jan 27 2016 19:43:41)
 MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-1184
+Included patches: 1-1185
 Huge version with GUI.  Features included (+) or not (-):
 +acl                +emacs_tags         +mouse              +syntax
 +arabic             +eval               +mouseshape         +tag_binary
@@ -99,3 +100,4 @@ shell32.lib  /nodefaultlib:lua53.lib   /nodefaultlib:python27.lib /nodefaultlib:
 [2]: https://tuxproject.de/projects/vim/_compile.bat.php
 [3]: https://github.com/universal-ctags/ctags.git
 [4]: https://github.com/vim/vim/blob/master/src/Make_mvc.mak
+[5]: https://www.microsoft.com/en-us/download/details.aspx?id=49984
