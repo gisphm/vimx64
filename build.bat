@@ -39,6 +39,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd6
 SET CPU=AMD64
 SET DEBUG=no
 SET FEATURES=HUGE
+SET CHANNEL=yes
 SET MBYTE=yes
 SET CSCOPE=yes
 SET SNIFF=yes
@@ -68,12 +69,17 @@ SET SDK_INCLUDE_DIR=C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include
 SET MSVCVER=14.0
 
 REM compile! (x64)
-REM compile both gui and console version binaries
+REM compile binaries for both gui and console version
 REM -------------------------------------
 nmake /C /S /f Make_mvc.mak clean
-nmake /C /S /f Make_mvc.mak IME=yes GIME=yes GUI=yes OLE=yes DIRECTX=yes CHANNEL=no
+nmake /C /S /f Make_mvc.mak IME=yes GIME=yes GUI=yes OLE=no DIRECTX=yes
+ren gvim.exe gvim_noOLE.exe
+
 nmake /C /S /f Make_mvc.mak clean
-nmake /C /S /f Make_mvc.mak IME=no GIME=no GUI=no OLE=no DIRECTX=no CHANNEL=yes
+nmake /C /S /f Make_mvc.mak IME=yes GIME=yes GUI=yes OLE=yes DIRECTX=yes
+
+nmake /C /S /f Make_mvc.mak clean
+nmake /C /S /f Make_mvc.mak IME=no GIME=no GUI=no OLE=no DIRECTX=no
 
 REM keep up the right directory structure
 REM -------------------------------------
@@ -108,9 +114,11 @@ REM a -- add files to archive
 REM -r -- recurse subdirectories
 REM -bd -- disable progress indicator
 REM -mmt[N] -- set number of cpu threads
+REM -mx=9 -- Level 9 of LZMA2 compression method for 7z format
+REM for more options, please check the help file shipped with 7-Zip distribution
 REM ------------------------------------
 cd temp\win64
-"%PROGRAMFILES%\7-Zip\7z" a -mmt4 -r -bd %ZIP_DIR%\vim-win64.7z *
+"%PROGRAMFILES%\7-Zip\7z" a -mx=9 -mmt4 -r -bd %ZIP_DIR%\vim-win64.7z *
 
 REM clean up everything
 REM in the source code directory
