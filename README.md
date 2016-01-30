@@ -39,9 +39,9 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jan 28 2016 20:26:38)
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jan 29 2016 07:40:05)
 MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-1187
+Included patches: 1-1194
 Huge version with GUI.  Features included (+) or not (-):
 +acl                +emacs_tags         +mouse              +syntax
 +arabic             +eval               +mouseshape         +tag_binary
@@ -80,20 +80,8 @@ Huge version with GUI.  Features included (+) or not (-):
 2nd user gvimrc file: "$HOME\vimfiles\gvimrc"
 3rd user gvimrc file: "$VIM\_gvimrc"
     system menu file: "$VIMRUNTIME\menu.vim"
-Compilation: cl /favor:blend -c /W3 /nologo  -I. -Iproto -DHAVE_PATHDEF -DWIN32  -DFEAT_SNIFF
--DFEAT_CSCOPE  -DFEAT_CHANNEL   -DFEAT_XPM_W32   -DWINVER=0x0500 -D_WIN32_WINNT=0x05
-00  /Fo.\ObjGXOUYHTAMD64/ /Ox /GL -DNDEBUG  /Zl /MT -DFEAT_OLE -DFEAT_MBYTE_IME
--DDYNAMIC_IME -DGLOBAL_IME -DFEAT_MBYTE -DFEAT_GUI_W32 -DFEAT_DIRECTX
--DDYNAMIC_DIRECTX -DDYNAMIC_ICONV -DDYNAMIC_GETTEXT -DFEAT_TCL -DDYNAMIC_TCL
--DDYNAMIC_TCL_DLL=\"tcl86.dll\" -DDYNAMIC_TCL_VER=\"8.6\" -DFEAT_LUA -DDYNAMIC_LUA
--DDYNAMIC_LUA_DLL=\"lua53.dll\" -DFEAT_PYTHON -DDYNAMIC_PYTHON -DDYNAMIC_PYTHON_DLL
-=\"python27.dll\" -DFEAT_PYTHON3 -DDYNAMIC_PYTHON3 -DDYNAMIC_PYTHON3_DLL=\"python35.dl
-l\" -DFEAT_HUGE /Fd.\ObjGXOUYHTAMD64/ /Zi
-Linking: link /RELEASE /nologo /subsystem:windows /LTCG:STATUS oldnames.lib kernel32.lib
-advapi32.lib shell32.lib gdi32.lib  comdlg32.lib ole32.lib uuid.lib /machine:AMD64 gdi32.lib version.lib
-winspool.lib comctl32.lib advapi32.lib shell32.lib  /machine:AMD64  libcmt.lib oleaut32.lib user32.lib
-shell32.lib  /nodefaultlib:lua53.lib   /nodefaultlib:python27.lib /nodefaultlib:python35.lib
-"C:\Dev\Utils\tcl\lib\tclstub86.lib" WSock32.lib xpm\x64\lib\libXpm.lib /PDB:gvim.pdb -debug
+Compilation: cl /favor:blend -c /W3 /nologo  -I. -Iproto -DHAVE_PATHDEF -DWIN32  -DFEAT_SNIFF -DFEAT_CSCOPE  -DFEAT_CHANNEL   -DFEAT_XPM_W32   -DWINVER=0x0500 -D_WIN32_WINNT=0x0500  /Fo.\ObjGXOUYHTAMD64/ /Ox /GL -DNDEBUG  /Zl /MT -DFEAT_OLE -DFEAT_MBYTE_IME -DDYNAMIC_IME -DGLOBAL_IME -DFEAT_MBYTE -DFEAT_GUI_W32 -DFEAT_DIRECTX -DDYNAMIC_DIRECTX -DDYNAMIC_ICONV -DDYNAMIC_GETTEXT -DFEAT_TCL -DDYNAMIC_TCL -DDYNAMIC_TCL_DLL=\"tcl86.dll\" -DDYNAMIC_TCL_VER=\"8.6\" -DFEAT_LUA -DDYNAMIC_LUA -DDYNAMIC_LUA_DLL=\"lua53.dll\" -DFEAT_PYTHON -DDYNAMIC_PYTHON -DDYNAMIC_PYTHON_DLL=\"python27.dll\" -DFEAT_PYTHON3 -DDYNAMIC_PYTHON3 -DDYNAMIC_PYTHON3_DLL=\"python35.dll\" -DFEAT_HUGE /Fd.\ObjGXOUYHTAMD64/ /Zi
+Linking: link /RELEASE /nologo /subsystem:windows /LTCG:STATUS oldnames.lib kernel32.lib advapi32.lib shell32.lib gdi32.lib  comdlg32.lib ole32.lib uuid.lib /machine:AMD64 gdi32.lib version.lib winspool.lib comctl32.lib advapi32.lib shell32.lib  /machine:AMD64  libcmt.lib oleaut32.lib user32.lib shell32.lib  /nodefaultlib:lua53.lib   /nodefaultlib:python27.lib /nodefaultlib:python35.lib "C:\Dev\Utils\tcl\lib\tclstub86.lib" WSock32.lib xpm\x64\lib\libXpm.lib /PDB:gvim.pdb -debug
 ```
 
 [1]: https://github.com/vim/vim
