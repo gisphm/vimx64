@@ -10,7 +10,7 @@
     2. `VIM_SRC` 是指克隆下来的 Vim 源代码的完整路径。
     2. `ZIP_DIR` 是指最终的 `vim-win64.7z` 的放置路径。
     3. 其他变量请参考源代码里的 [Make_mvc.mak][4] 文件。
-+ 我编译好的 [64 位 Vim](Vim.7z)，自己上传一份。
++ 我编译好的 [64 位 Vim](vim-win64.7z)，自己上传一份。
 
 ## vim 支持库列表
 + ctags （用 Visual Studio 2015 编译，源码来自 [universal-ctags][3])
