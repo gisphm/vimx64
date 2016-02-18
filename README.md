@@ -31,7 +31,7 @@
 Universal Ctags 0.0.0, Copyright (C) 2015 Universal Ctags Team
 Universal Ctags is derived from Exuberant Ctags.
 Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
-  Compiled: Jan 27 2016, 18:46:44
+  Compiled: Feb 18 2016, 11:28:51
   URL: https://ctags.io/
   Optional compiled features: +win32, +wildcards, +regex, +internal-sort
 ```
@@ -39,36 +39,36 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Feb 17 2016 11:34:29)
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Feb 18 2016 11:30:15)
 MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-1342
+Included patches: 1-1345
 Huge version with GUI.  Features included (+) or not (-):
-+acl                +emacs_tags         +mouse              +syntax
-+arabic             +eval               +mouseshape         +tag_binary
-+autocmd            +ex_extra           +multi_byte_ime/dyn +tag_old_static
-+balloon_eval       +extra_search       +multi_lang         -tag_any_white
-+browse             +farsi              -mzscheme           +tcl/dyn
-++builtin_terms     +file_in_path       -netbeans_intg      -tgetent
-+byte_offset        +find_in_path       +ole                -termresponse
-+channel            +float              +path_extra         +textobjects
-+cindent            +folding            -perl               +title
-+clientserver       -footer             +persistent_undo    +toolbar
-+clipboard          +gettext/dyn        -postscript         +user_commands
-+cmdline_compl      -hangul_input       +printer            +vertsplit
-+cmdline_hist       +iconv/dyn          +profile            +virtualedit
-+cmdline_info       +insert_expand      +python/dyn         +visual
-+comments           +jumplist           +python3/dyn        +visualextra
-+conceal            +keymap             +quickfix           +viminfo
-+cryptv             +langmap            +reltime            +vreplace
-+cscope             +libcall            +rightleft          +wildignore
-+cursorbind         +linebreak          -ruby               +wildmenu
-+cursorshape        +lispindent         +scrollbind         +windows
-+dialog_con_gui     +listcmds           +signs              +writebackup
-+diff               +localmap           +smartindent        -xfontset
-+digraphs           +lua/dyn            +sniff              -xim
-+directx            +menu               +startuptime        -xterm_save
--dnd                +mksession          +statusline         +xpm_w32
--ebcdic             +modify_fname       -sun_workshop
++acl                +emacs_tags         +modify_fname       -sun_workshop
++arabic             +eval               +mouse              +syntax
++autocmd            +ex_extra           +mouseshape         +tag_binary
++balloon_eval       +extra_search       +multi_byte_ime/dyn +tag_old_static
++browse             +farsi              +multi_lang         -tag_any_white
+++builtin_terms     +file_in_path       -mzscheme           +tcl/dyn
++byte_offset        +find_in_path       -netbeans_intg      -tgetent
++channel            +float              +ole                -termresponse
++cindent            +folding            +path_extra         +textobjects
++clientserver       -footer             -perl               +title
++clipboard          +gettext/dyn        +persistent_undo    +toolbar
++cmdline_compl      -hangul_input       -postscript         +user_commands
++cmdline_hist       +iconv/dyn          +printer            +vertsplit
++cmdline_info       +insert_expand      +profile            +virtualedit
++comments           +job                +python/dyn         +visual
++conceal            +jumplist           +python3/dyn        +visualextra
++cryptv             +keymap             +quickfix           +viminfo
++cscope             +langmap            +reltime            +vreplace
++cursorbind         +libcall            +rightleft          +wildignore
++cursorshape        +linebreak          -ruby               +wildmenu
++dialog_con_gui     +lispindent         +scrollbind         +windows
++diff               +listcmds           +signs              +writebackup
++digraphs           +localmap           +smartindent        -xfontset
++directx            +lua/dyn            +sniff              -xim
+-dnd                +menu               +startuptime        -xterm_save
+-ebcdic             +mksession          +statusline         +xpm_w32
    system vimrc file: "$VIM\vimrc"
      user vimrc file: "$HOME\_vimrc"
  2nd user vimrc file: "$HOME\vimfiles\vimrc"
@@ -80,7 +80,7 @@ Huge version with GUI.  Features included (+) or not (-):
 2nd user gvimrc file: "$HOME\vimfiles\gvimrc"
 3rd user gvimrc file: "$VIM\_gvimrc"
     system menu file: "$VIMRUNTIME\menu.vim"
-Compilation: cl /favor:blend -c /W3 /nologo  -I. -Iproto -DHAVE_PATHDEF -DWIN32  -DFEAT_SNIF -DFEAT_CSCOPE  -DFEAT_CHANNEL   -DFEAT_XPM_W32   -DWINVER=0x0500 -D_WIN32_WINNT=0x0500  /Fo.\ObjGXOUYHTAMD64/ /Ox /GL -DNDEBUG  /Zl /MT -DFEAT_OLE -DFEAT_MBYTE_IME -DDYNAMIC_IME -DGLOBAL_IME -DFEAT_MBYTE -DFEAT_GUI_W32 -DFEAT_DIRECTX -DDYNAMIC_DIRECTX -DDYNAMIC_ICONV -DDYNAMIC_GETTEXT -DFEAT_TCL -DDYNAMIC_TCL -DDYNAMIC_TCL_DLL=\"tcl86.dll\" -DDYNAMIC_TCL_VER=\"8.6\" -DFEAT_LUA -DDYNAMIC_LUA -DDYNAMIC_LUA_DLL=\"lua53.dll\" -DFEAT_PYTHON -DDYNAMIC_PYTHON -DDYNAMIC_PYTHON_DLL=\"python27.dll\" -DFEAT_PYTHON3 -DDYNAMIC_PYTHON3 -DDYNAMIC_PYTHON3_DLL=\"python35.dll\" -DFEAT_HUGE /Fd.\ObjGXOUYHTAMD64/ /Zi
+Compilation: cl /favor:blend -c /W3 /nologo  -I. -Iproto -DHAVE_PATHDEF -DWIN32  -DFEAT_SNIFF -DFEAT_CSCOPE  -DFEAT_CHANNEL   -DFEAT_XPM_W32   -DWINVER=0x0500 -D_WIN32_WINNT=0x0500  /Fo.\ObjGXOUYHTAMD64/ /Ox /GL -DNDEBUG  /Zl /MT -DFEAT_OLE -DFEAT_MBYTE_IME -DDYNAMIC_IME -DGLOBAL_IME -DFEAT_MBYTE -DFEAT_GUI_W32 -DFEAT_DIRECTX -DDYNAMIC_DIRECTX -DDYNAMIC_ICONV -DDYNAMIC_GETTEXT -DFEAT_TCL -DDYNAMIC_TCL -DDYNAMIC_TCL_DLL=\"tcl86.dll\" -DDYNAMIC_TCL_VER=\"8.6\" -DFEAT_LUA -DDYNAMIC_LUA -DDYNAMIC_LUA_DLL=\"lua53.dll\" -DFEAT_PYTHON -DDYNAMIC_PYTHON -DDYNAMIC_PYTHON_DLL=\"python27.dll\" -DFEAT_PYTHON3 -DDYNAMIC_PYTHON3 -DDYNAMIC_PYTHON3_DLL=\"python35.dll\" -DFEAT_HUGE /Fd.\ObjGXOUYHTAMD64/ /Zi
 Linking: link /RELEASE /nologo /subsystem:windows /LTCG:STATUS oldnames.lib kernel32.lib advapi32.lib shell32.lib gdi32.lib  comdlg32.lib ole32.lib uuid.lib /machine:AMD64 gdi32.lib version.lib winspool.lib comctl32.lib advapi32.lib shell32.lib  /machine:AMD64  libcmt.lib oleaut32.lib user32.lib shell32.lib  /nodefaultlib:lua53.lib   /nodefaultlib:python27.lib /nodefaultlib:python35.lib "C:\Dev\Utils\tcl\lib\tclstub86.lib" WSock32.lib xpm\x64\lib\libXpm.lib /PDB:gvim.pdb -debug
 ```
 
