@@ -39,9 +39,9 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Feb 19 2016 16:10:40)
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Feb 21 2016 15:57:38)
 MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-1353
+Included patches: 1-1376
 Huge version with GUI.  Features included (+) or not (-):
 +acl                +emacs_tags         +modify_fname       -sun_workshop
 +arabic             +eval               +mouse              +syntax
