@@ -6,7 +6,7 @@
 + 然后要有 Visual Studio 2015 的编译环境，至于怎么安装，我就不多说了，可以搜索出一大堆东西来。
 + 最后就是编译。我参考了这位德国大大的 [编译脚本][2] （之前都是下载他编译好的），然后写了个自己的 [编译脚本](build.bat)。
 + **build.bat** 变量说明
-    1. `LUA` `PYTHON3` `TCL` 三个变量指向各自的二进制安装路径。
+    1. `LUA` `PYTHON` `TCL` 三个变量指向各自的二进制安装路径。
     2. `VIM_SRC` 是指克隆下来的 Vim 源代码的完整路径。
     2. `ZIP_DIR` 是指最终的 `vim-win64.7z` 的放置路径。
     3. 其他变量请参考源代码里的 [Make_mvc.mak][4] 文件。
@@ -31,7 +31,7 @@
 Universal Ctags 0.0.0, Copyright (C) 2015 Universal Ctags Team
 Universal Ctags is derived from Exuberant Ctags.
 Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
-  Compiled: Mar 24 2016, 10:04:19
+  Compiled: Apr  2 2016, 10:30:35
   URL: https://ctags.io/
   Optional compiled features: +win32, +wildcards, +regex, +internal-sort
 ```
@@ -39,9 +39,9 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Mar 24 2016 10:05:59)
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Apr  2 2016 10:32:09)
 MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-1641
+Included patches: 1-1692
 Huge version with GUI.  Features included (+) or not (-):
 +acl                +emacs_tags         +modify_fname       -sun_workshop
 +arabic             +eval               +mouse              +syntax
