@@ -31,7 +31,7 @@
 Universal Ctags 0.0.0, Copyright (C) 2015 Universal Ctags Team
 Universal Ctags is derived from Exuberant Ctags.
 Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
-  Compiled: Jun  3 2016, 10:25:00
+  Compiled: Jun 16 2016, 09:50:58
   URL: https://ctags.io/
   Optional compiled features: +win32, +wildcards, +regex, +internal-sort
 ```
@@ -39,36 +39,37 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jun  3 2016 10:27:12)
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jun 16 2016 09:52:26)
 MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-1883
+Included patches: 1-1941
 Huge version with GUI.  Features included (+) or not (-):
-+acl                +emacs_tags         +modify_fname       -sun_workshop
-+arabic             +eval               +mouse              +syntax
-+autocmd            +ex_extra           +mouseshape         +tag_binary
-+balloon_eval       +extra_search       +multi_byte_ime/dyn +tag_old_static
-+browse             +farsi              +multi_lang         -tag_any_white
-++builtin_terms     +file_in_path       -mzscheme           +tcl/dyn
-+byte_offset        +find_in_path       -netbeans_intg      -tgetent
-+channel            +float              +ole                -termresponse
-+cindent            +folding            +path_extra         +textobjects
-+clientserver       -footer             -perl               +title
-+clipboard          +gettext/dyn        +persistent_undo    +toolbar
-+cmdline_compl      -hangul_input       -postscript         +user_commands
-+cmdline_hist       +iconv/dyn          +printer            +vertsplit
-+cmdline_info       +insert_expand      +profile            +virtualedit
-+comments           +job                +python/dyn         +visual
-+conceal            +jumplist           +python3/dyn        +visualextra
-+cryptv             +keymap             +quickfix           +viminfo
-+cscope             +langmap            +reltime            +vreplace
-+cursorbind         +libcall            +rightleft          +wildignore
-+cursorshape        +linebreak          -ruby               +wildmenu
-+dialog_con_gui     +lispindent         +scrollbind         +windows
-+diff               +listcmds           +signs              +writebackup
-+digraphs           +localmap           +smartindent        -xfontset
-+directx            +lua/dyn            +sniff              -xim
--dnd                +menu               +startuptime        -xterm_save
--ebcdic             +mksession          +statusline         +xpm_w32
++acl                +eval               +mouseshape         +tag_old_static
++arabic             +ex_extra           +multi_byte_ime/dyn -tag_any_white
++autocmd            +extra_search       +multi_lang         +tcl/dyn
++balloon_eval       +farsi              -mzscheme           -termguicolors
++browse             +file_in_path       -netbeans_intg      -tgetent
+++builtin_terms     +find_in_path       +ole                -termresponse
++byte_offset        +float              +packages           +textobjects
++channel            +folding            +path_extra         +timers
++cindent            -footer             -perl               +title
++clientserver       +gettext/dyn        +persistent_undo    +toolbar
++clipboard          -hangul_input       -postscript         +user_commands
++cmdline_compl      +iconv/dyn          +printer            +vertsplit
++cmdline_hist       +insert_expand      +profile            +virtualedit
++cmdline_info       +job                +python/dyn         +visual
++comments           +jumplist           +python3/dyn        +visualextra
++conceal            +keymap             +quickfix           +viminfo
++cryptv             +langmap            +reltime            +vreplace
++cscope             +libcall            +rightleft          +wildignore
++cursorbind         +linebreak          -ruby               +wildmenu
++cursorshape        +lispindent         +scrollbind         +windows
++dialog_con_gui     +listcmds           +signs              +writebackup
++diff               +localmap           +smartindent        -xfontset
++digraphs           +lua/dyn            +startuptime        -xim
++directx            +menu               +statusline         -xterm_save
+-dnd                +mksession          -sun_workshop       +xpm_w32
+-ebcdic             +modify_fname       +syntax
++emacs_tags         +mouse              +tag_binary
    system vimrc file: "$VIM\vimrc"
      user vimrc file: "$HOME\_vimrc"
  2nd user vimrc file: "$HOME\vimfiles\vimrc"
