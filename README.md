@@ -33,7 +33,7 @@
 Universal Ctags 0.0.0, Copyright (C) 2015 Universal Ctags Team
 Universal Ctags is derived from Exuberant Ctags.
 Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
-  Compiled: Sep 13 2016, 23:27:36
+  Compiled: Sep 15 2016, 13:09:14
   URL: https://ctags.io/
   Optional compiled features: +win32, +wildcards, +regex, +internal-sort
 ```
@@ -41,10 +41,10 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Sep 13 2016 23:30:06)
-MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-3
-Huge version with GUI.  Features included (+) or not (-):
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Sep 15 2016 13:11:46)
+MS-Windows 64-bit GUI version 带 OLE 支持
+包含补丁: 1-4
+巨型版本 带图形界面。  可使用(+)与不可使用(-)的功能:
 +acl                +eval               +mouse              +syntax
 +arabic             +ex_extra           +mouseshape         +tag_binary
 +autocmd            +extra_search       +multi_byte_ime/dyn +tag_old_static
@@ -72,20 +72,20 @@ Huge version with GUI.  Features included (+) or not (-):
 -dnd                +menu               +startuptime        -xim
 -ebcdic             +mksession          +statusline         +xpm_w32
 +emacs_tags         +modify_fname       -sun_workshop       -xterm_save
-   system vimrc file: "$VIM\vimrc"
-     user vimrc file: "$HOME\_vimrc"
- 2nd user vimrc file: "$HOME\vimfiles\vimrc"
- 3rd user vimrc file: "$VIM\_vimrc"
-      user exrc file: "$HOME\_exrc"
-  2nd user exrc file: "$VIM\_exrc"
-  system gvimrc file: "$VIM\gvimrc"
-    user gvimrc file: "$HOME\_gvimrc"
-2nd user gvimrc file: "$HOME\vimfiles\gvimrc"
-3rd user gvimrc file: "$VIM\_gvimrc"
+     系统 vimrc 文件: "$VIM\vimrc"
+     用户 vimrc 文件: "$HOME\_vimrc"
+ 第二用户 vimrc 文件: "$HOME\vimfiles\vimrc"
+ 第三用户 vimrc 文件: "$VIM\_vimrc"
+      用户 exrc 文件: "$HOME\_exrc"
+  第二用户 exrc 文件: "$VIM\_exrc"
+    系统 gvimrc 文件: "$VIM\gvimrc"
+    用户 gvimrc 文件: "$HOME\_gvimrc"
+第二用户 gvimrc 文件: "$HOME\vimfiles\gvimrc"
+第三用户 gvimrc 文件: "$VIM\_gvimrc"
        defaults file: "$VIMRUNTIME\defaults.vim"
-    system menu file: "$VIMRUNTIME\menu.vim"
-Compilation: cl /favor:blend -c /W3 /nologo  -I. -Iproto -DHAVE_PATHDEF -DWIN32  -DFEAT_CSCOPE  -DFEAT_JOB_CHANNEL   -DFEAT_XPM_W32   -DWINVER=0x0500 -D_WIN32_WINNT=0x0500  /Fo.\ObjGXOUYHTAMD64/ -DHAVE_STDINT_H /Ox /GL -DNDEBUG  /Zl /MT -DFEAT_OLE -DFEAT_MBYTE_IME -DDYNAMIC_IME -DGLOBAL_IME -DFEAT_MBYTE -DFEAT_GUI_W32 -DFEAT_DIRECTX -DDYNAMIC_DIRECTX -DDYNAMIC_ICONV -DDYNAMIC_GETTEXT -DFEAT_TCL -DDYNAMIC_TCL -DDYNAMIC_TCL_DLL=\"tcl86.dll\" -DDYNAMIC_TCL_VER=\"8.6\" -DFEAT_LUA -DDYNAMIC_LUA -DDYNAMIC_LUA_DLL=\"lua53.dll\" -DFEAT_PYTHON -DDYNAMIC_PYTHON -DDYNAMIC_PYTHON_DLL=\"python27.dll\" -DFEAT_PYTHON3 -DDYNAMIC_PYTHON3 -DDYNAMIC_PYTHON3_DLL=\"python35.dll\" -DFEAT_HUGE /Fd.\ObjGXOUYHTAMD64/ /Zi
-Linking: link /RELEASE /nologo /subsystem:windows /LTCG:STATUS oldnames.lib kernel32.lib advapi32.lib shell32.lib gdi32.lib  comdlg32.lib ole32.lib uuid.lib /machine:AMD64 gdi32.lib version.lib   winspool.lib comctl32.lib advapi32.lib shell32.lib  /machine:AMD64  libcmt.lib oleaut32.lib user32.lib  /nodefaultlib:lua53.lib   /nodefaultlib:python27.lib /nodefaultlib:python35.lib   "C:\Dev\Utils\tcl\lib\tclstub86.lib" WSock32.lib xpm\x64\lib-vc14\libXpm.lib /PDB:gvim.pdb -debug
+        系统菜单文件: "$VIMRUNTIME\menu.vim"
+编译方式: cl /favor:blend -c /W3 /nologo  -I. -Iproto -DHAVE_PATHDEF -DWIN32  -DFEAT_CSCOPE  -DFEAT_JOB_CHANNEL   -DFEAT_XPM_W32   -DWINVER=0x0500 -D_WIN32_WINNT=0x0500  /Fo.\ObjGXOUYHTAMD64/ -DHAVE_STDINT_H /Ox /GL -DNDEBUG  /Zl /MT -DFEAT_OLE -DFEAT_MBYTE_IME -DDYNAMIC_IME -DGLOBAL_IME -DFEAT_MBYTE -DFEAT_GUI_W32 -DFEAT_DIRECTX -DDYNAMIC_DIRECTX -DDYNAMIC_ICONV -DDYNAMIC_GETTEXT -DFEAT_TCL -DDYNAMIC_TCL -DDYNAMIC_TCL_DLL=\"tcl86.dll\" -DDYNAMIC_TCL_VER=\"8.6\" -DFEAT_LUA -DDYNAMIC_LUA -DDYNAMIC_LUA_DLL=\"lua53.dll\" -DFEAT_PYTHON -DDYNAMIC_PYTHON -DDYNAMIC_PYTHON_DLL=\"python27.dll\" -DFEAT_PYTHON3 -DDYNAMIC_PYTHON3 -DDYNAMIC_PYTHON3_DLL=\"python35.dll\" -DFEAT_HUGE /Fd.\ObjGXOUYHTAMD64/ /Zi
+链接方式: link /RELEASE /nologo /subsystem:windows /LTCG:STATUS oldnames.lib kernel32.lib advapi32.lib shell32.lib gdi32.lib  comdlg32.lib ole32.lib uuid.lib /machine:AMD64 gdi32.lib version.lib   winspool.lib comctl32.lib advapi32.lib shell32.lib  /machine:AMD64  libcmt.lib oleaut32.lib user32.lib  /nodefaultlib:lua53.lib   /nodefaultlib:python27.lib /nodefaultlib:python35.lib   "C:\Dev\Utils\tcl\lib\tclstub86.lib" WSock32.lib xpm\x64\lib-vc14\libXpm.lib /PDB:gvim.pdb -debug
 ```
 
 [1]: https://github.com/vim/vim
