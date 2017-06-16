@@ -8,7 +8,7 @@ SET ZIP_DIR=C:\WorkSpaces\buildvim
 REM set library versions ...
 REM ------------------------------------
 set LIBPYTHON2=27
-set LIBPYTHON3=35
+set LIBPYTHON3=36
 set LIBLUASHRT=53
 REM set LIBPERLVER=520
 set LIBTCLSHRT=86
@@ -35,7 +35,7 @@ REM prepare the build environment ...
 REM those evironment variables can be
 REM found in file "%VIM_SRC%\src\Make_mvc.mak"
 REM ------------------------------------
-call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" amd64
 SET CPU=AMD64
 SET DEBUG=no
 SET FEATURES=HUGE
@@ -66,7 +66,7 @@ SET TCL_VER_LONG=%LIBTCLLONG%
 SET DYNAMIC_TCL=yes
 SET XPM=xpm\x64
 SET SDK_INCLUDE_DIR=C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include
-SET MSVCVER=14.0
+SET MSVCVER=15.0
 
 REM compile! (x64)
 REM compile binaries for both gui and console version
