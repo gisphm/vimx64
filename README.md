@@ -21,29 +21,27 @@
 
 ## 几点说明
 + 压缩包里已经自带有最新版本的 `ctags.exe` `lua53.dll` `tcl86.dll`。
-+ 系统里必须要有 [Visual C++ Redistributable for Visual Studio 2015 Update 3][5]。
-+ 使用 `Windows 10 SDK (ver. 10.0.14393.0)` 构建。
++ 系统里必须要有 [Visual C++ Redistributable for Visual Studio 2015 Update 3][5] 和 [Microsoft Visual C++ Redistributable for Visual Studio 2017][6]。
++ 使用 `Windows 10 SDK (ver. 10.0.15063.0)` 构建。
 + `Win32.mak` 来自 `Windows 7.1A SDK`。
-+ ~~我没有安装 Python 2.7，所以没有 python2 的支持。~~
-+ ~~若启用 xpm 库支持，则在 Visual Studio 2017 的`gvim.exe`链接过程中库`libXpm.lib`会出现链接问题，无法编译出 GUI，故舍去 xpm 库。~~
-    + 我重新用 Visual Studio 2017 编译了 xpm 库。现在的 GVim 可以打开 xpm 文件了。
++ 我重新用 Visual Studio 2017 编译了 xpm 库。现在的 GVim 可以打开 xpm 文件了。
 
 ## `ctags.exe` 版本信息
 ```
-Universal Ctags 0.0.0, Copyright (C) 2015 Universal Ctags Team
+Universal Ctags 0.0.0(b26cf375), Copyright (C) 2015 Universal Ctags Team
 Universal Ctags is derived from Exuberant Ctags.
 Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
-  Compiled: Oct 30 2016, 05:16:09
+  Compiled: Jun 21 2017, 07:23:18
   URL: https://ctags.io/
-  Optional compiled features: +win32, +wildcards, +regex, +internal-sort
+  Optional compiled features: +win32, +wildcards, +regex, +internal-sort, +case-insensitive-filenames
 ```
 
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Jun 16 2017 11:04:17)
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Jun 21 2017 07:27:02)
 MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-642
+Included patches: 1-648
 Huge version with GUI.  Features included (+) or not (-):
 +acl                +eval               +mouse              +syntax
 +arabic             +ex_extra           +mouseshape         +tag_binary
@@ -93,3 +91,4 @@ Linking: link /RELEASE /nologo /subsystem:windows /LTCG:STATUS oldnames.lib kern
 [3]: https://github.com/universal-ctags/ctags.git
 [4]: https://github.com/vim/vim/blob/master/src/Make_mvc.mak
 [5]: https://www.microsoft.com/en-us/download/details.aspx?id=53587
+[6]: https://www.visualstudio.com/downloads/
