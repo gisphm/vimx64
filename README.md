@@ -28,10 +28,10 @@
 
 ## `ctags.exe` 版本信息
 ```
-Universal Ctags 0.0.0(b26cf375), Copyright (C) 2015 Universal Ctags Team
+Universal Ctags 0.0.0(7d6be565), Copyright (C) 2015 Universal Ctags Team
 Universal Ctags is derived from Exuberant Ctags.
 Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
-  Compiled: Jun 21 2017, 07:23:18
+  Compiled: Jun 27 2017, 07:29:21
   URL: https://ctags.io/
   Optional compiled features: +win32, +wildcards, +regex, +internal-sort, +case-insensitive-filenames
 ```
@@ -39,9 +39,9 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
 ## `gvim.exe` 的 `:ver` 命令输出为
 
 ```
-VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Jun 21 2017 07:27:02)
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Jun 27 2017 07:31:45)
 MS-Windows 64-bit GUI version with OLE support
-Included patches: 1-648
+Included patches: 1-679
 Huge version with GUI.  Features included (+) or not (-):
 +acl                +eval               +mouse              +syntax
 +arabic             +ex_extra           +mouseshape         +tag_binary
