@@ -15,8 +15,8 @@
 ## vim 支持库列表
 + ctags （用 Visual Studio 2017 编译，源码来自 [universal-ctags][3])
 + lua 5.3.2 （用 Visual Studio 2017 编译）
-+ python 2.7.11 （官方下载的最新版本二进制安装包）
-+ python 3.5.1 （官方下载的最新版本二进制安装包）
++ python 2.7.13 （官方下载的最新版本二进制安装包）
++ python 3.6.2 （官方下载的最新版本二进制安装包）
 + tcl 8.6.4 （用 Visual Studio 2015 自行编译）
 
 ## 几点说明
